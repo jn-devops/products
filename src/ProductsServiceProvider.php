@@ -2,9 +2,9 @@
 
 namespace Homeful\Products;
 
+use Homeful\Products\Commands\ProductsCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Homeful\Products\Commands\ProductsCommand;
 
 class ProductsServiceProvider extends PackageServiceProvider
 {

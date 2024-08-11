@@ -2,6 +2,4 @@
 
 namespace Homeful\Products;
 
-class Products
-{
-}
+class Products {}
