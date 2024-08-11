@@ -8,12 +8,20 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('products_table', function (Blueprint $table) {
+        Schema::create('products', function (Blueprint $table) {
             $table->id();
-
-            // add fields
-
+            $table->string('sku')->unique();
+            $table->string('name')->index();
+            $table->string('brand')->index();
+            $table->string('category')->index();
+            $table->text('description')->index();
+            $table->schemalessAttributes('meta');
             $table->timestamps();
         });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('products');
     }
 };

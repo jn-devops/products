@@ -17,7 +17,7 @@ class ProductsServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('products')
-            ->hasConfigFile()
+            ->hasConfigFile(['products'])
             ->hasViews()
             ->hasMigration('create_products_table')
             ->hasCommand(ProductsCommand::class);
