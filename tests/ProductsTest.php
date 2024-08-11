@@ -1,8 +1,8 @@
 <?php
 
+use Homeful\Products\Models\Product;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
-use Homeful\Products\Models\Product;
 
 uses(RefreshDatabase::class, WithFaker::class);
 

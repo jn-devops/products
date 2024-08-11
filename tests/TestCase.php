@@ -22,7 +22,7 @@ class TestCase extends Orchestra
     {
         return [
             ProductsServiceProvider::class,
-            SchemalessAttributesServiceProvider::class
+            SchemalessAttributesServiceProvider::class,
         ];
     }
 
