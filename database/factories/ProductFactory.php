@@ -17,6 +17,7 @@ class ProductFactory extends Factory
             'brand' => $this->faker->word(),
             'category' => $this->faker->word(),
             'description' => $this->faker->paragraph(),
+            'price' => (float) $this->faker->numberBetween(850000, 2500000),
         ];
     }
 }

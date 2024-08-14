@@ -3,6 +3,7 @@
 use Homeful\Products\Models\Product;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Whitecube\Price\Price;
 
 uses(RefreshDatabase::class, WithFaker::class);
 
@@ -14,5 +15,6 @@ it('has attributes', function () {
         expect($product->brand)->toBeString();
         expect($product->category)->toBeString();
         expect($product->description)->toBeString();
+        expect($product->price)->toBeInstanceOf(Price::class);
     }
 });
