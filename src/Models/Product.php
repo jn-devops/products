@@ -3,13 +3,13 @@
 namespace Homeful\Products\Models;
 
 use Brick\Money\Money;
+use Homeful\Common\Casts\PriceCast;
+use Homeful\Common\Interfaces\PropertyInterface;
 use Homeful\Common\Traits\HasMeta;
 use Homeful\Common\Traits\HasPackageFactory as HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\SchemalessAttributes\SchemalessAttributes;
-use Homeful\Common\Casts\PriceCast;
 use Whitecube\Price\Price;
-use Homeful\Common\Interfaces\PropertyInterface;
 
 /**
  * Class Product
@@ -41,7 +41,7 @@ class Product extends Model implements PropertyInterface
     ];
 
     protected $casts = [
-        'price' => PriceCast::class
+        'price' => PriceCast::class,
     ];
 
     public function getSKU(): string
@@ -61,6 +61,6 @@ class Product extends Model implements PropertyInterface
 
     public function getAppraisedValue(): Price
     {
-        return $this->price;//TODO: improve this
+        return $this->price; //TODO: improve this
     }
 }
