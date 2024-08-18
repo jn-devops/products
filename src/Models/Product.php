@@ -2,14 +2,14 @@
 
 namespace Homeful\Products\Models;
 
-use Brick\Money\Money;
-use Homeful\Common\Casts\PriceCast;
-use Homeful\Common\Interfaces\PropertyInterface;
-use Homeful\Common\Traits\HasMeta;
 use Homeful\Common\Traits\HasPackageFactory as HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Spatie\SchemalessAttributes\SchemalessAttributes;
+use Homeful\Common\Interfaces\PropertyInterface;
+use Illuminate\Database\Eloquent\Model;
+use Homeful\Common\Casts\PriceCast;
+use Homeful\Common\Traits\HasMeta;
 use Whitecube\Price\Price;
+use Brick\Money\Money;
 
 /**
  * Class Product

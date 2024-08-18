@@ -1,9 +1,9 @@
 <?php
 
-use Homeful\Products\Data\ProductData;
-use Homeful\Products\Models\Product;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Homeful\Products\Data\ProductData;
+use Homeful\Products\Models\Product;
 use Whitecube\Price\Price;
 
 uses(RefreshDatabase::class, WithFaker::class);

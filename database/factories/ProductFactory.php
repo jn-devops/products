@@ -2,8 +2,8 @@
 
 namespace Homeful\Products\Database\Factories;
 
-use Homeful\Products\Models\Product;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Homeful\Products\Models\Product;
 
 class ProductFactory extends Factory
 {
