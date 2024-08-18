@@ -1,10 +1,9 @@
 <?php
 
-
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Homeful\Products\Data\ProductData;
 use Homeful\Products\Models\Product;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
 use Whitecube\Price\Price;
 
 uses(RefreshDatabase::class, WithFaker::class);
@@ -21,9 +20,9 @@ it('has attributes', function () {
     }
 });
 
-it('has data', function() {
+it('has data', function () {
     $product = Product::factory()->create();
-    with(ProductData::fromModel($product), function (ProductData $data) use ($product){
+    with(ProductData::fromModel($product), function (ProductData $data) use ($product) {
         if ($product instanceof Product) {
             expect($data->sku)->toBe($product->sku);
             expect($data->name)->toBe($product->name);

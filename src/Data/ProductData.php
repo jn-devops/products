@@ -14,7 +14,7 @@ class ProductData extends Data
         public string $category,
         public string $description,
         public float $price
-    ){}
+    ) {}
 
     public static function fromModel(Product $product): ProductData
     {
