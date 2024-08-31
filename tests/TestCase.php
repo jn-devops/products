@@ -2,10 +2,10 @@
 
 namespace Homeful\Products\Tests;
 
-use Homeful\Products\ProductsServiceProvider;
+use Spatie\SchemalessAttributes\SchemalessAttributesServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Spatie\SchemalessAttributes\SchemalessAttributesServiceProvider;
+use Homeful\Products\ProductsServiceProvider;
 
 class TestCase extends Orchestra
 {
