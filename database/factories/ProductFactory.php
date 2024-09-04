@@ -18,6 +18,11 @@ class ProductFactory extends Factory
             'category' => $this->faker->word(),
             'description' => $this->faker->paragraph(),
             'price' => (float) $this->faker->numberBetween(850000, 2500000),
+            'market_segment' => $this->faker->word(),
+            'location' => $this->faker->word(),
+            'destinations' => $this->faker->paragraph(),
+            'directions' => $this->faker->paragraph(),
+            'amenities' => $this->faker->paragraph(),
         ];
     }
 }

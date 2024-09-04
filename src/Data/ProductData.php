@@ -13,7 +13,12 @@ class ProductData extends Data
         public string $brand,
         public string $category,
         public string $description,
-        public float $price
+        public float $price,
+        public string $market_segment,
+        public string $location,
+        public string $destinations,
+        public string $directions,
+        public string $amenities,
     ) {}
 
     public static function fromModel(Product $product): ProductData
@@ -24,7 +29,12 @@ class ProductData extends Data
             brand: $product->brand,
             category: $product->category,
             description: $product->description,
-            price: $product->price->inclusive()->getAmount()->toFloat()
+            price: $product->price->inclusive()->getAmount()->toFloat(),
+            market_segment: $product->market_segment,
+            location: $product->location,
+            destinations: $product->destinations,
+            directions: $product->directions,
+            amenities: $product->amenities
         );
     }
 }

@@ -4,6 +4,7 @@ namespace Homeful\Products\Models;
 
 use Homeful\Common\Traits\HasPackageFactory as HasFactory;
 use Spatie\SchemalessAttributes\SchemalessAttributes;
+use Homeful\Products\Traits\HasAdditionalAttributes;
 use Homeful\Common\Interfaces\PropertyInterface;
 use Illuminate\Database\Eloquent\Model;
 use Homeful\Common\Casts\PriceCast;
@@ -21,12 +22,18 @@ use Brick\Money\Money;
  * @property string $category
  * @property string $description
  * @property Price $price
+ * @property string $market_segment
+ * @property string $location
+ * @property string $destinations
+ * @property string $directions
+ * @property string $amenities
  * @property SchemalessAttributes $meta
  *
  * @method int getKey()
  */
 class Product extends Model implements PropertyInterface
 {
+    use HasAdditionalAttributes;
     use HasFactory;
     use HasMeta;
 
@@ -37,7 +44,7 @@ class Product extends Model implements PropertyInterface
         'category',
         'category',
         'description',
-        'price',
+        'price'
     ];
 
     protected $casts = [
