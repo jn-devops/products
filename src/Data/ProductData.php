@@ -19,6 +19,7 @@ class ProductData extends Data
         public string $destinations,
         public string $directions,
         public string $amenities,
+        public string $facade_url,
     ) {}
 
     public static function fromModel(Product $product): ProductData
@@ -34,7 +35,8 @@ class ProductData extends Data
             location: $product->location,
             destinations: $product->destinations,
             directions: $product->directions,
-            amenities: $product->amenities
+            amenities: $product->amenities,
+            facade_url: $product->facade_url
         );
     }
 }

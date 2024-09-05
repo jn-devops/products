@@ -27,6 +27,7 @@ use Brick\Money\Money;
  * @property string $destinations
  * @property string $directions
  * @property string $amenities
+ * @property string $facade_url
  * @property SchemalessAttributes $meta
  *
  * @method int getKey()

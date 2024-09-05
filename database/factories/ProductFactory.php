@@ -23,6 +23,7 @@ class ProductFactory extends Factory
             'destinations' => $this->faker->paragraph(),
             'directions' => $this->faker->paragraph(),
             'amenities' => $this->faker->paragraph(),
+            'facade_url' => $this->faker->imageUrl(),
         ];
     }
 }

@@ -22,6 +22,7 @@ it('has attributes', function () {
         expect($product->destinations)->toBeString();
         expect($product->directions)->toBeString();
         expect($product->amenities)->toBeString();
+        expect($product->facade_url)->toBeString();
     }
 });
 
@@ -40,6 +41,7 @@ it('has data', function () {
             expect($data->destinations)->toBe($product->destinations);
             expect($data->directions)->toBe($product->directions);
             expect($data->amenities)->toBe($product->amenities);
+            expect($data->facade_url)->toBe($product->facade_url);
         }
     });
 });

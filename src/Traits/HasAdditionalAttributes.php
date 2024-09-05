@@ -11,6 +11,7 @@ trait HasAdditionalAttributes
     const DESTINATIONS_FIELD = 'destinations';
     const DIRECTIONS_FIELD = 'directions';
     const AMENITIES_FIELD = 'amenities';
+    const FACADE_URL_FIELD = 'facade_url';
 
     public function initializeHasAdditionalAttributes(): void
     {
@@ -85,5 +86,19 @@ trait HasAdditionalAttributes
         $default = null;
 
         return $this->getAttribute('meta')->get(Product::AMENITIES_FIELD) ?? $default;
+    }
+
+    public function setFacadeUrlAttribute(string $value): self
+    {
+        $this->getAttribute('meta')->set(Product::FACADE_URL_FIELD, $value);
+
+        return $this;
+    }
+
+    public function getFacadeUrlAttribute(): ?string
+    {
+        $default = null;
+
+        return $this->getAttribute('meta')->get(Product::FACADE_URL_FIELD) ?? $default;
     }
 }
