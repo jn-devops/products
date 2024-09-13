@@ -28,6 +28,17 @@ use Brick\Money\Money;
  * @property string $directions
  * @property string $amenities
  * @property string $facade_url
+ * @property string $project_location
+ * @property string $project_code
+ * @property string $property_name
+ * @property string $phase
+ * @property string $block
+ * @property string $lot
+ * @property float|null $lot_area
+ * @property float|null $floor_area
+ * @property string $project_address
+ * @property string $property_type
+ * @property string $unit_type
  * @property SchemalessAttributes $meta
  *
  * @method int getKey()
@@ -43,9 +54,9 @@ class Product extends Model implements PropertyInterface
         'name',
         'brand',
         'category',
-        'category',
         'description',
-        'price'
+        'price',
+
     ];
 
     protected $casts = [
