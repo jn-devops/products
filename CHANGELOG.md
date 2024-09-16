@@ -2,6 +2,10 @@
 
 All notable changes to `products` will be documented in this file.
 
+## #v1.2.4 - 2024-09-16
+
+schema set attribute, return if $value is null
+
 ## v1.2.2 - 2024-09-16
 
 **Full Changelog**: https://github.com/jn-devops/products/compare/v1.2.1...v1.2.2
