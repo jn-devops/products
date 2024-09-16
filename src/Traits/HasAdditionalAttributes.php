@@ -48,192 +48,260 @@ trait HasAdditionalAttributes
 
     // Setters and Getters for each field
 
-    public function setMarketSegmentAttribute(string $value): self
+    public function setMarketSegmentAttribute(?string $value): self
     {
+        if ($value === null) {
+            return $this;
+        }
+
         $this->getAttribute('meta')->set(Product::MARKET_SEGMENT_FIELD, $value);
         return $this;
     }
 
     public function getMarketSegmentAttribute(): ?string
     {
-        return $this->getAttribute('meta')->get(Product::MARKET_SEGMENT_FIELD) ?? null;
+        return $this->getAttribute('meta')->get(Product::MARKET_SEGMENT_FIELD) ?? '';
     }
 
-    public function setLocationAttribute(string $value): self
+    public function setLocationAttribute(?string $value): self
     {
+        if ($value === null) {
+            return $this;
+        }
+
         $this->getAttribute('meta')->set(Product::LOCATION_FIELD, $value);
         return $this;
     }
 
     public function getLocationAttribute(): ?string
     {
-        return $this->getAttribute('meta')->get(Product::LOCATION_FIELD) ?? null;
+        return $this->getAttribute('meta')->get(Product::LOCATION_FIELD) ?? '';
     }
 
-    public function setDestinationsAttribute(string $value): self
+    public function setDestinationsAttribute(?string $value): self
     {
+        if ($value === null) {
+            return $this;
+        }
+
         $this->getAttribute('meta')->set(Product::DESTINATIONS_FIELD, $value);
         return $this;
     }
 
     public function getDestinationsAttribute(): ?string
     {
-        return $this->getAttribute('meta')->get(Product::DESTINATIONS_FIELD) ?? null;
+        return $this->getAttribute('meta')->get(Product::DESTINATIONS_FIELD) ?? '';
     }
 
-    public function setDirectionsAttribute(string $value): self
+    public function setDirectionsAttribute(?string $value): self
     {
+        if ($value === null) {
+            return $this;
+        }
+
         $this->getAttribute('meta')->set(Product::DIRECTIONS_FIELD, $value);
         return $this;
     }
 
     public function getDirectionsAttribute(): ?string
     {
-        return $this->getAttribute('meta')->get(Product::DIRECTIONS_FIELD) ?? null;
+        return $this->getAttribute('meta')->get(Product::DIRECTIONS_FIELD) ?? '';
     }
 
-    public function setAmenitiesAttribute(string $value): self
+    public function setAmenitiesAttribute(?string $value): self
     {
+        if ($value === null) {
+            return $this;
+        }
+
         $this->getAttribute('meta')->set(Product::AMENITIES_FIELD, $value);
         return $this;
     }
 
     public function getAmenitiesAttribute(): ?string
     {
-        return $this->getAttribute('meta')->get(Product::AMENITIES_FIELD) ?? null;
+        return $this->getAttribute('meta')->get(Product::AMENITIES_FIELD) ?? '';
     }
 
-    public function setFacadeUrlAttribute(string $value): self
+    public function setFacadeUrlAttribute(?string $value): self
     {
+        if ($value === null) {
+            return $this;
+        }
+
         $this->getAttribute('meta')->set(Product::FACADE_URL_FIELD, $value);
         return $this;
     }
 
     public function getFacadeUrlAttribute(): ?string
     {
-        return $this->getAttribute('meta')->get(Product::FACADE_URL_FIELD) ?? null;
+        return $this->getAttribute('meta')->get(Product::FACADE_URL_FIELD) ?? '';
     }
 
     // Methods for additional fields
 
-    public function setProjectLocationAttribute(string $value): self
+    public function setProjectLocationAttribute(?string $value): self
     {
+        if ($value === null) {
+            return $this;
+        }
+
         $this->getAttribute('meta')->set(Product::PROJECT_LOCATION_FIELD, $value);
         return $this;
     }
 
     public function getProjectLocationAttribute(): ?string
     {
-        return $this->getAttribute('meta')->get(Product::PROJECT_LOCATION_FIELD) ?? null;
+        return $this->getAttribute('meta')->get(Product::PROJECT_LOCATION_FIELD) ?? '';
     }
 
-    public function setProjectCodeAttribute(string $value): self
+    public function setProjectCodeAttribute(?string $value): self
     {
+        if ($value === null) {
+            return $this;
+        }
+
         $this->getAttribute('meta')->set(Product::PROJECT_CODE_FIELD, $value);
         return $this;
     }
 
     public function getProjectCodeAttribute(): ?string
     {
-        return $this->getAttribute('meta')->get(Product::PROJECT_CODE_FIELD) ?? null;
+        return $this->getAttribute('meta')->get(Product::PROJECT_CODE_FIELD) ?? '';
     }
 
-    public function setPropertyNameAttribute(string $value): self
+    public function setPropertyNameAttribute(?string $value): self
     {
+        if ($value === null) {
+            return $this;
+        }
+
         $this->getAttribute('meta')->set(Product::PROPERTY_NAME_FIELD, $value);
         return $this;
     }
 
     public function getPropertyNameAttribute(): ?string
     {
-        return $this->getAttribute('meta')->get(Product::PROPERTY_NAME_FIELD) ?? null;
+        return $this->getAttribute('meta')->get(Product::PROPERTY_NAME_FIELD) ?? '';
     }
 
-    public function setPhaseAttribute(string $value): self
+    public function setPhaseAttribute(?string $value): self
     {
+        if ($value === null) {
+            return $this;
+        }
+
         $this->getAttribute('meta')->set(Product::PHASE_FIELD, $value);
         return $this;
     }
 
     public function getPhaseAttribute(): ?string
     {
-        return $this->getAttribute('meta')->get(Product::PHASE_FIELD) ?? null;
+        return $this->getAttribute('meta')->get(Product::PHASE_FIELD) ?? '';
     }
 
-    public function setBlockAttribute(string $value): self
+    public function setBlockAttribute(?string $value): self
     {
+        if ($value === null) {
+            return $this;
+        }
+
         $this->getAttribute('meta')->set(Product::BLOCK_FIELD, $value);
         return $this;
     }
 
     public function getBlockAttribute(): ?string
     {
-        return $this->getAttribute('meta')->get(Product::BLOCK_FIELD) ?? null;
+        return $this->getAttribute('meta')->get(Product::BLOCK_FIELD) ?? '';
     }
 
-    public function setLotAttribute(string $value): self
+    public function setLotAttribute(?string $value): self
     {
+        if ($value === null) {
+            return $this;
+        }
+
         $this->getAttribute('meta')->set(Product::LOT_FIELD, $value);
         return $this;
     }
 
     public function getLotAttribute(): ?string
     {
-        return $this->getAttribute('meta')->get(Product::LOT_FIELD) ?? null;
+        return $this->getAttribute('meta')->get(Product::LOT_FIELD) ?? '';
     }
 
-    public function setLotAreaAttribute(float $value): self
+    public function setLotAreaAttribute(?float $value): self
     {
+        if ($value === null) {
+            return $this;
+        }
+
         $this->getAttribute('meta')->set(Product::LOT_AREA_FIELD, $value);
         return $this;
     }
 
     public function getLotAreaAttribute(): ?float
     {
-        return $this->getAttribute('meta')->get(Product::LOT_AREA_FIELD) ?? null;
+        return $this->getAttribute('meta')->get(Product::LOT_AREA_FIELD) ?? 0;
     }
 
-    public function setFloorAreaAttribute(float $value): self
+    public function setFloorAreaAttribute(?float $value): self
     {
+        if ($value === null) {
+            return $this;
+        }
+
         $this->getAttribute('meta')->set(Product::FLOOR_AREA_FIELD, $value);
         return $this;
     }
 
     public function getFloorAreaAttribute(): ?float
     {
-        return $this->getAttribute('meta')->get(Product::FLOOR_AREA_FIELD) ?? null;
+        return $this->getAttribute('meta')->get(Product::FLOOR_AREA_FIELD) ?? 0;
     }
 
-    public function setProjectAddressAttribute(string $value): self
+    public function setProjectAddressAttribute(?string $value): self
     {
+        if ($value === null) {
+            return $this;
+        }
+
         $this->getAttribute('meta')->set(Product::PROJECT_ADDRESS_FIELD, $value);
         return $this;
     }
 
     public function getProjectAddressAttribute(): ?string
     {
-        return $this->getAttribute('meta')->get(Product::PROJECT_ADDRESS_FIELD) ?? null;
+        return $this->getAttribute('meta')->get(Product::PROJECT_ADDRESS_FIELD) ?? '';
     }
 
-    public function setPropertyTypeAttribute(string $value): self
+    public function setPropertyTypeAttribute(?string $value): self
     {
+        if ($value === null) {
+            return $this;
+        }
+
         $this->getAttribute('meta')->set(Product::PROPERTY_TYPE_FIELD, $value);
         return $this;
     }
 
     public function getPropertyTypeAttribute(): ?string
     {
-        return $this->getAttribute('meta')->get(Product::PROPERTY_TYPE_FIELD) ?? null;
+        return $this->getAttribute('meta')->get(Product::PROPERTY_TYPE_FIELD) ?? '';
     }
 
-    public function setUnitTypeAttribute(string $value): self
+    public function setUnitTypeAttribute(?string $value): self
     {
+        if ($value === null) {
+            return $this;
+        }
+
         $this->getAttribute('meta')->set(Product::UNIT_TYPE_FIELD, $value);
         return $this;
     }
 
     public function getUnitTypeAttribute(): ?string
     {
-        return $this->getAttribute('meta')->get(Product::UNIT_TYPE_FIELD) ?? null;
+        return $this->getAttribute('meta')->get(Product::UNIT_TYPE_FIELD) ?? '';
     }
 }
